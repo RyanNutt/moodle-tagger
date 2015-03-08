@@ -13,7 +13,7 @@ local_tagger = {
             var el = jQuery('div#fitem_id_tags');
 
             // Hide the existing one
-            //el.hide();
+            el.hide();
 
             // Add in our own stuff
             var html = '<div class="fitem fitem_tagger">';
