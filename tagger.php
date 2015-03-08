@@ -13,4 +13,13 @@ class Tagger {
         return $results; 
     }
     
+    /**
+     * Returns a list of all official tags
+     */
+    public static function get_official_tags() {
+        global $DB;
+        $results = $DB->get_records_sql("SELECT id, name, rawname, tagtype FROM {tag} WHERE tagtype='official' ORDER BY name ASC"); 
+        return $results; 
+    }
+    
 }
