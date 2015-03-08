@@ -28,5 +28,6 @@ natsort($tag_names);
     var tagger = {};
     tagger.tags = ['<?php echo implode("','", $tag_names); ?>'];
 </script>
+<?php 
 
 
