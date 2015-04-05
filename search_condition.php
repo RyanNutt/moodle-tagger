@@ -83,8 +83,12 @@ class local_tagger_question_bank_search_condition extends core_question\bank\sea
     }
 
     public function display_options() {
-
+        
         global $PAGE;
+        if ('mod-quiz-edit' != $PAGE->pagetype) {
+            return; 
+        } 
+        //echo '<pre>'.print_r($PAGE, true).'</pre>'; 
         //$PAGE->requires->jquery();
         $PAGE->requires->js('/local/tagger/js/tag-it.js');
         //$PAGE->requires->js('https://cdnjs.cloudflare.com/ajax/libs/select2/3.5.2/select2.css
